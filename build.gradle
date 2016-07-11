@@ -1,0 +1,20 @@
+apply plugin: 'groovy'
+
+sourceSets {
+    jobs {
+        groovy {
+            srcDirs 'jobs'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://repo.jenkins-ci.org/releases/'
+    }
+}
+
+dependencies {
+    compile 'org.jenkins-ci.plugins:job-dsl-core:1.48'
+}
